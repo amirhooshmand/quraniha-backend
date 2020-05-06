@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/surahs', "SurahController@show");
 Route::get('/surahs/{surah}', "SurahController@find");
+Route::get('/get-daily-verse', "SurahController@daily");
