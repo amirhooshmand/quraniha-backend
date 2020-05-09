@@ -16,9 +16,12 @@ class VerseSeeder extends Seeder
         foreach ($json as $ayah) {
             DB::table('verses')->insert([
                 'id' => $count,
-                'surah_id' => $ayah["SuraID"],
-                'verse_number' => $ayah["VerseID"],
-                'text' => $ayah["AyahText"],
+                'surah_id' => $ayah["Chapter"],
+                'verse_number' => $ayah["Verse"],
+                'text' => $ayah["Arabic"],
+                'hizb' => $ayah["Hizb"],
+                'juz' => $ayah["Juz"],
+                'page' => $ayah["Page"],
                 'created_at' => now(),
                 'updated_at' => now()
             ]);
