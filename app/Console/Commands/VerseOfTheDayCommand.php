@@ -13,7 +13,7 @@ class VerseOfTheDayCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'verse:day';
+    protected $signature = 'verse:daily';
 
     /**
      * The console command description.
