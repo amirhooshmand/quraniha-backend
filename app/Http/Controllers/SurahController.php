@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Surah;
 use App\Verse;
+use App\VerseOfTheDay;
 use Illuminate\Http\Request;
 
 class SurahController extends Controller
@@ -18,9 +19,8 @@ class SurahController extends Controller
     }
 
     function daily(){
-        $verse = Verse::whereRaw('length(text) < 200')->inRandomOrder()->first();
-        $obj = $verse->surah;
-
+        $verse = VerseOfTheDay::all()->last();
+        $obj = $verse->verse;
         return $verse;
     }
 }
