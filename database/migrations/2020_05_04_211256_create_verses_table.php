@@ -17,6 +17,9 @@ class CreateVersesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('surah_id');
             $table->integer('verse_number');
+            $table->integer('hizb');
+            $table->integer('juz');
+            $table->integer('page');
             $table->text('text');
             $table->timestamps();
         });
