@@ -19,8 +19,9 @@ class SurahController extends Controller
     }
 
     function daily(){
-        $verse = VerseOfTheDay::all()->last();
-        $obj = $verse->verse;
-        return $verse;
+        $dailyVerse = VerseOfTheDay::all()->last();
+        $verse = $dailyVerse->verse;
+        $surah = $verse->surah;
+        return $dailyVerse;
     }
 }
